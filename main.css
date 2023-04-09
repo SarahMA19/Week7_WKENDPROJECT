@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Outfit', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,13 +11,14 @@ body {
 }
 
 .card {
-    background-color: black;
     color: white;
     padding: 2em;
     border-radius: 30px;
     width: 100%;
     max-width: 420px;
     margin: 1em;
+    background-color: rgba(129, 49, 81, 0.7);
+   
 }
 
 .search{
@@ -26,15 +27,7 @@ body {
     justify-content: center;
 }
 
-.button{
-    margin: 0.5em;
 
-}
-
-button:hover{
-    background-color: #7c7c7c6b;
-
-}
 
 button {
     margin: 0.5em;
@@ -43,16 +36,30 @@ button {
     height: 44px;
     width: 7em;
     outline: none;
-    background-color: #7c7c7c2b;
+    background-color: #59064d2b;
     color: white;
     cursor: pointer;
+    box-shadow: 0 5px #360b34;
+    padding: 10px;
+    display: inline-block;
+    
+}
+
+button:hover{
+    background-color: #e5cdd86b;
+
+}
+
+button:active{
+    background-color: #59064d2b;
+    box-shadow: 0 5px #e5cdd86b;
+    transform: translate(2px);
 }
 
 input.search-bar {
     border: none;
     outline: none;
-    background-color: 7c7c7c2b;
-    background-color: #7c7c7c2b;
+    background-color: #4a082f2b;
     font-size: 120%;
     font-size: inherit;
     font-size: 105%;
@@ -63,17 +70,50 @@ input.search-bar {
     width: 100%;
 }
 
+h2{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
 h1.temp {
     margin: 0;
-    margin-bottom: 0.4em;
+    margin-bottom: 0;
+    font-size: 5rem;
+    text-align: center;
+    padding-bottom: 0.2em;
 }
 
 .description{
     text-transform: capitalize;
     margin-left: 8px;
+    font-size: 2rem;
+    
 }
 
 .flex{
     display: flex;
+    justify-content: center;
+}
+
+.weather.loading{
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+
+.weather.loadin:after{
+    visibility: visible;
+    content: "Loading...";
+    color: white;
+    position:absolute;
+    top: 0;
+}
+
+.sunrise .sunset {
     align-items: center;
+}
+
+.flex2{
+    display: flex;
+    justify-content: space-between;
 }
